@@ -19,10 +19,3 @@ df= pd.concat([top_def, top_fwd, top_gk, top_mid])
 
 #print(df.head(10)) #checking if sorted properly
 #print(df.tail(10))
-
-buffer=input("Enter a player: ")
-
-if buffer in df['web_name'].values:
-    print("Good Pick!")
-else:
-    print("Entered player is invalid or not in the top picks.") 
