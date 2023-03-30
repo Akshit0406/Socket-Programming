@@ -27,19 +27,19 @@ for i in range(10):
 		
 		while True:
 			if buffer in teamone: #checking if client has already picked this player
-				buffer= "You have already picked this player!"
+				buffer= "You have already picked this player!\n Please enter anouther valid player"
 				client1.send(buffer.encode())
 				buffer= client1.recv(1024)
 				buffer= buffer.decode()
 			
 			elif buffer in teamtwo: #checking if opponent has picked the player
-				buffer= "Player 2 has already picked this player!"
+				buffer= "Player 2 has already picked this player!\n Please enter anouther valid player"
 				client1.send(buffer.encode())
 				buffer= client1.recv(1024)
 				buffer= buffer.decode()
 			
 			elif buffer not in vp.df['web_name'].values: #checking if player is valid
-				buffer= "Entered player is invalid or not in the top picks."
+				buffer= "Entered player is invalid or not in the top picks.\n Please enter anouther valid player"
 				client1.send(buffer.encode())
 				buffer= client1.recv(1024)
 				buffer= buffer.decode()
@@ -59,19 +59,19 @@ for i in range(10):
 		
 		while True:
 			if buffer in teamone: #checking if client has already picked this player
-				buffer= "Player 1 has already picked this player!"
+				buffer= "Player 1 has already picked this player!\n Please enter anouther valid player"
 				client2.send(buffer.encode())
 				buffer= client2.recv(1024)
 				buffer= buffer.decode()
 			
 			elif buffer in teamtwo: #checking if opponent has picked the player
-				buffer= "You have already picked this player!"
+				buffer= "You have already picked this player!\n Please enter anouther valid player"
 				client2.send(buffer.encode())
 				buffer= client2.recv(1024)
 				buffer= buffer.decode()
 			
 			elif buffer not in vp.df['web_name'].values: #checking if player is valid
-				buffer= "Entered player is invalid or not in the top picks."
+				buffer= "Entered player is invalid or not in the top picks.\n Please enter anouther valid player"
 				client2.send(buffer.encode())
 				buffer= client2.recv(1024)
 				buffer= buffer.decode()
