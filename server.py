@@ -20,7 +20,7 @@ teamtwo=[]
 for i in range(10):
     
 	if(i==0 or i==3 or i==4 or i==7 or i==8):
-		buffer= "Player1 enter choice"
+		buffer= "\nPlayer1 enter choice"
 		client1.send(buffer.encode())
 		buffer= client1.recv(1024)
 		buffer= buffer.decode()
@@ -52,7 +52,7 @@ for i in range(10):
 				break	 
 	
 	else:
-		buffer= "Player2 enter choice"
+		buffer= "\nPlayer2 enter choice"
 		client2.send(buffer.encode())
 		buffer= client2.recv(1024)
 		buffer= buffer.decode()
